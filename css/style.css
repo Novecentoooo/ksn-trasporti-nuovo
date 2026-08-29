@@ -446,7 +446,9 @@ section {
 .red-banner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
+    
+    width: 100%;
+    
     background: #c8102e;
 
     color: #ffffff;
@@ -1320,6 +1322,13 @@ section {
 
     font-size: 13px;
     }
+.language-switcher {
+    margin: 15px 0 0;
+
+    justify-content: center;
+
+    width: 100%;
+}
 
 }
 
@@ -1365,5 +1374,49 @@ section {
     font-weight: 700;
 }
 
+/* ========================================
+   per i bottoni ing-ita
+======================================== */
+.language-switcher {
+    display: flex;
+    align-items: center;
 
+    gap: 8px;
+
+    margin-left: 20px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.language-btn {
+    padding: 4px 6px;
+
+    border: none;
+
+    background: transparent;
+    color: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    font: inherit;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.language-btn:hover {
+    color: #ffffff;
+}
+
+.language-btn.active {
+    color: #c8102e;
+}
+
+.language-btn:active {
+    transform: scale(0.95);
+}
 

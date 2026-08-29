@@ -31,10 +31,21 @@
             </button>
 
             <nav class="main-nav" aria-label="Navigazione principale">
-                <a href="#home">Home</a>
-                <a href="#services">Servizi</a>
-                <a href="#about">Chi siamo</a>
-                <a href="#contact">Richiedi un preventivo</a>
+                <a href="#home" data-i18n="nav_home">Home</a>
+                <a href="#services" data-i18n="nav_services">Servizi</a>
+                <a href="#about" data-i18n="nav_about">Chi siamo</a>
+                <a href="#contact" data-i18n="nav_contact">Richiedi un preventivo</a>
+                <div class="language-switcher">
+                <button type="button" class="language-btn active" data-lang="it">
+                   IT
+                </button>
+
+                 <span>|</span>
+
+                <button type="button" class="language-btn" data-lang="en">
+                   EN
+                 </button>
+                </div>
             </nav>
 
         </div>
@@ -53,12 +64,12 @@
 
                 <span class="hero-label">TRASPORTI E LOGISTICA</span>
 
-                <h1>
+                <h1 data-i18n="hero_title">
                     Trasporti merci in Italia
                     <span>e in tutta Europa.</span>
                 </h1>
 
-                <p>
+                <p data-i18n="hero_text">
                     Trasporti affidabili e professionali da un punto A
                     a un punto B, con soluzioni pensate per le tue esigenze.
                 </p>
@@ -73,11 +84,11 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#contact" class="btn btn-primary">
+                    <a href="#contact" class="btn" data-i18n="hero_quote">
                         Richiedi un preventivo
                     </a>
 
-                    <a href="#services" class="btn btn-secondary">
+                    <a href="#services" class="btn" data-i18n="hero_services">
                         Scopri i nostri servizi
                     </a>
 
@@ -97,7 +108,7 @@
 
                 <span class="section-label">COSA FACCIAMO</span>
 
-                <h2>I nostri servizi</h2>
+                <h2 data-i18n="services_title">I nostri servizi</h2>
 
                 <p>
                     Soluzioni di trasporto pensate per accompagnare
@@ -110,8 +121,8 @@
 
                 <article class="service-card">
                     <div class="service-icon">🚛</div>
-                    <h3>Trasporto merci</h3>
-                    <p>
+                    <h3 data-i18n="service_1_title">Trasporto merci</h3>
+                    <p data-i18n="service_1_text">
                         Trasporto di merci dal punto A al punto B
                         in modo organizzato e professionale.
                     </p>
@@ -119,24 +130,24 @@
 
                 <article class="service-card">
                     <div class="service-icon">📦</div>
-                    <h3>Trasporti nazionali</h3>
-                    <p>
+                    <h3 data-i18n="service_2_title">Trasporti nazionali</h3>
+                    <p data-i18n="service_2_text">
                         Soluzioni di trasporto su tutto il territorio italiano.
                     </p>
                 </article>
 
                 <article class="service-card">
                     <div class="service-icon">🌍</div>
-                    <h3>Trasporti internazionali</h3>
-                    <p>
+                    <h3 data-i18n="service_3_title" >Trasporti internazionali</h3>
+                    <p data-i18n="service_3_text">
                         Trasporti con destinazioni in tutta Europa.
                     </p>
                 </article>
 
                 <article class="service-card">
                     <div class="service-icon">🔄</div>
-                    <h3>Soluzioni personalizzate</h3>
-                    <p>
+                    <h3 data-i18n="service_4_title">Soluzioni personalizzate</h3>
+                    <p data-i18n="service_4_text">
                         Valutiamo ogni esigenza per trovare la soluzione
                         più adatta al tuo trasporto.
                     </p>
@@ -148,38 +159,73 @@
 
 
         <!-- BANNER -->
-       <section class="red-banner">
+      <section class="red-banner">
 
     <div class="banner-item">
-    <span class="banner-icon">🤝</span>
-    <div>
-        <strong>Affidabilità</strong>
-        <p>Un servizio attento e professionale per ogni trasporto</p>
+
+        <span class="banner-icon">🤝</span>
+
+        <div>
+            <strong data-i18n="banner_reliability_title">
+                Affidabilità
+            </strong>
+
+            <p data-i18n="banner_reliability_text">
+                Un servizio attento e professionale per ogni trasporto
+            </p>
+        </div>
+
     </div>
-</div>
+
 
     <div class="banner-item">
+
         <span class="banner-icon">🇪🇺</span>
+
         <div>
-            <strong>Europa</strong>
-            <p>Destinazioni in tutta Europa</p>
+            <strong data-i18n="banner_europe_title">
+                Europa
+            </strong>
+
+            <p data-i18n="banner_europe_text">
+                Destinazioni in tutta Europa
+            </p>
         </div>
+
     </div>
 
+
     <div class="banner-item">
+
         <span class="banner-icon">📦</span>
+
         <div>
-            <strong>Ogni tipo di merce</strong>
-            <p>Soluzioni per diverse esigenze di trasporto</p>
+            <strong data-i18n="banner_goods_title">
+                Ogni tipo di merce
+            </strong>
+
+            <p data-i18n="banner_goods_text">
+                Soluzioni per diverse esigenze di trasporto
+            </p>
         </div>
+
     </div>
 
+
     <div class="banner-item">
+
         <span class="banner-icon">⚡</span>
+
         <div>
-            <strong>Soluzioni personalizzate</strong>
-            <p>Servizi pensati per le tue necessità</p>
+            <strong data-i18n="banner_custom_title">
+                Soluzioni personalizzate
+            </strong>
+
+            <p data-i18n="banner_custom_text">
+                Servizi pensati per le tue necessità
+            </p>
         </div>
+
     </div>
 
 </section>
@@ -192,19 +238,18 @@
                     alt="Magazzino e logistica KSN TRASPORTI">
             </div>
 
-            <div class="why-content">
+           <div class="why-content">
 
-                <span class="section-label">PERCHÉ SCEGLIERE KSN</span>
+    <span class="section-label" data-i18n="why_label">
+        PERCHÉ SCEGLIERE KSN TRASPORTI?
+    </span>
 
-                <h2>
-                    Perché scegliere KSN TRASPORTI?
-                </h2>
+    <p class="why-intro" data-i18n="why_intro">
+        Ogni trasporto ha esigenze diverse. Per questo lavoriamo con attenzione
+        e flessibilità per offrire un servizio adatto alle necessità del cliente.
+    </p>
 
-                <p>
-                    Ogni trasporto ha esigenze diverse. Per questo
-                    lavoriamo con attenzione e flessibilità per offrire
-                    un servizio adatto alle necessità del cliente.
-                </p>
+                
 
                <div class="why-list">
 
@@ -212,10 +257,10 @@
         <span class="why-icon">✓</span>
 
         <div>
-            <h3>Affidabilità</h3>
-            <p>
-                Organizziamo ogni trasporto con attenzione e
-                professionalità.
+            <h3 data-i18n="why_1_title">Affidabilità</h3>
+
+            <p data-i18n="why_1_text">
+             Organizziamo ogni trasporto con attenzione e professionalità.
             </p>
         </div>
     </div>
@@ -225,10 +270,10 @@
         <span class="why-icon">↔</span>
 
         <div>
-            <h3>Flessibilità</h3>
-            <p>
-                Soluzioni adattabili alle esigenze specifiche
-                di ogni cliente.
+            <h3 data-i18n="why_2_title">Flessibilità</h3>
+
+            <p data-i18n="why_2_text">
+            Soluzioni adattabili alle esigenze specifiche di ogni cliente.
             </p>
         </div>
     </div>
@@ -238,9 +283,10 @@
         <span class="why-icon">🌍</span>
 
         <div>
-            <h3>Copertura europea</h3>
-            <p>
-                Trasporti con destinazioni in tutta Europa.
+            <h3 data-i18n="why_3_title">Copertura europea</h3>
+
+             <p data-i18n="why_3_text">
+             Trasporti con destinazioni in tutta Europa.
             </p>
         </div>
     </div>
@@ -250,11 +296,11 @@
         <span class="why-icon">⚡</span>
 
         <div>
-            <h3>Assistenza</h3>
-            <p>
-                Siamo disponibili per supportarti nelle tue
-                esigenze di trasporto.
-            </p>
+            <h3 data-i18n="why_4_title">Assistenza</h3>
+
+        <p data-i18n="why_4_text">
+         Siamo disponibili per supportarti nelle tue esigenze di trasporto.
+        </p>
         </div>
     </div>
 
