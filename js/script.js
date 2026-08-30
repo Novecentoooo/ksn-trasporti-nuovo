@@ -291,3 +291,21 @@ serviceCards.forEach((card) => {
     });
 
 });
+
+// Effetto touch sulle voci "Perché scegliere KSN"
+
+const whyItems = document.querySelectorAll(".why-item");
+
+whyItems.forEach((item) => {
+
+    item.addEventListener("touchstart", () => {
+        item.classList.add("touch-active");
+    });
+
+    item.addEventListener("touchend", () => {
+        setTimeout(() => {
+            item.classList.remove("touch-active");
+        }, 250);
+    });
+
+});

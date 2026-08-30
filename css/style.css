@@ -598,6 +598,17 @@ section {
     font-size: 15px;
 }
 
+/* Effetto touch sulle voci "Perché scegliere KSN" */
+
+.why-item.touch-active {
+    transform: translateX(6px);
+}
+
+.why-item.touch-active > span {
+    transform: scale(1.1);
+    background: #111111;
+}
+
 
 /* ========================================
    ABOUT
