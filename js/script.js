@@ -76,6 +76,7 @@ const languageButtons = document.querySelectorAll(".language-btn");
 
 function changeLanguage(language) {
 
+    // Traduzione dei testi
     const elements = document.querySelectorAll("[data-i18n]");
 
     elements.forEach((element) => {
@@ -88,6 +89,23 @@ function changeLanguage(language) {
 
     });
 
+
+    // Traduzione dei placeholder
+    const placeholderElements =
+        document.querySelectorAll("[data-i18n-placeholder]");
+
+    placeholderElements.forEach((element) => {
+
+        const key = element.dataset.i18nPlaceholder;
+
+        if (translations[language][key]) {
+            element.placeholder = translations[language][key];
+        }
+
+    });
+
+
+    // Aggiorna il pulsante della lingua attiva
     languageButtons.forEach((button) => {
 
         button.classList.toggle(
@@ -96,9 +114,7 @@ function changeLanguage(language) {
         );
 
     });
-
 }
-
 languageButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
@@ -108,6 +124,7 @@ languageButtons.forEach((button) => {
     });
 
 });
+
 /* ========================================
    per efettivo cambio lingua 
 ======================================== */
@@ -190,7 +207,107 @@ why_3_text:
 why_4_title: "Assistenza",
 why_4_text:
     "Siamo disponibili per supportarti nelle tue esigenze di trasporto.",
-     
+      /* ========================================
+           chi siamo
+           ======================================== */   
+         about_label: "CHI SIAMO",
+
+about_title: "Trasporto e affidabilità, in movimento.",
+
+about_text_1:
+    "KSN TRASPORTI è un'azienda con sede a Borso del Grappa, specializzata nel trasporto di merci in Italia e in Europa.",
+
+about_text_2:
+    "Ci occupiamo di trasportare le tue merci dal punto A al punto B, offrendo un servizio professionale e flessibile.",
+
+about_button: "Parliamo del tuo trasporto",
+
+/* ========================================
+           urgenze
+           ======================================== */   
+emergency_label: "REPERIBILITÀ H24",
+
+emergency_title: "Hai un'urgenza?",
+
+emergency_text:
+    "Hai bisogno di organizzare un trasporto rapidamente? Contattaci subito: siamo disponibili H24.",
+
+emergency_call: "📞 Contattaci subito",
+
+emergency_quote: "Richiedi un preventivo",
+
+//il modulo per preventivo
+
+contact_label: "CONTATTACI",
+
+contact_title: "Richiedi un preventivo",
+
+contact_intro:
+    "Raccontaci cosa devi trasportare e da dove a dove. Ti ricontatteremo per valutare la tua richiesta.",
+
+route_departure: "PARTENZA",
+route_departure_title: "Da dove parte la merce?",
+
+route_destination: "DESTINAZIONE",
+route_destination_title: "Dove deve arrivare la merce?",
+
+country_label: "Paese",
+city_label: "Città",
+zip_label: "CAP",
+
+departure_country_placeholder: "Es. Italia",
+departure_city_placeholder: "Es. Borso del Grappa",
+departure_zip_placeholder: "Es. 31030",
+
+destination_country_placeholder: "Es. Germania",
+destination_city_placeholder: "Es. Monaco",
+destination_zip_placeholder: "Es. 80331",
+
+name_label: "Nome e cognome / Azienda",
+name_placeholder: "Es. Mario Rossi / Azienda S.r.l.",
+
+email_label: "Email",
+email_placeholder: "nome@azienda.it",
+
+phone_label: "Telefono",
+phone_placeholder: "+39 ...",
+
+goods_label: "Tipo di merce",
+goods_placeholder: "Es. Pallet, mobili, macchinari...",
+
+packages_label: "Numero di colli",
+packages_placeholder: "Es. 5",
+
+weight_label: "Peso indicativo",
+weight_placeholder: "Es. 500 kg",
+
+dimensions_label: "Dimensioni",
+dimensions_placeholder: "Es. 120 × 80 × 100 cm",
+
+date_label: "Data desiderata",
+
+message_placeholder:
+    "Descrivi il trasporto, quantità, eventuali esigenze particolari...",
+
+submit_quote: "Richiedi il preventivo",
+
+// footer
+
+final_cta_title: "Hai bisogno di un trasporto?",
+final_cta_text:
+    "Raccontaci cosa devi trasportare e da dove a dove.",
+final_cta_button: "Richiedi un preventivo",
+
+footer_description:
+    "Trasporti e soluzioni logistiche da Borso del Grappa in tutta Italia e in Europa.",
+
+footer_contacts: "Contatti",
+footer_availability: "🕐 Reperibilità H24",
+footer_quick_links: "Link rapidi",
+
+footer_copyright:
+    "© 2026 KSN TRASPORTI. Tutti i diritti riservati.",
+
     },
 
 
@@ -268,6 +385,107 @@ why_3_text:
 why_4_title: "Support",
 why_4_text:
     "We are available to support you with your transport needs.",
+
+     /* ========================================
+           chi siamo
+           ======================================== */   
+           about_label: "ABOUT US",
+
+about_title: "Transport and reliability, always moving.",
+
+about_text_1:
+    "KSN TRASPORTI is a company based in Borso del Grappa, specializing in freight transport throughout Italy and Europe.",
+
+about_text_2:
+    "We transport your goods from point A to point B, providing a professional and flexible service.",
+
+about_button: "Let's talk about your transport",
+
+/* ========================================
+           urgenze
+           ======================================== */  
+     emergency_label: "AVAILABLE 24/7",
+
+emergency_title: "Do you have an urgent request?",
+
+emergency_text:
+    "Do you need to arrange transport quickly? Contact us immediately: we are available 24/7.",
+
+emergency_call: "📞 Contact us now",
+
+emergency_quote: "Request a quote",      
+// il modulo per preventivo
+
+contact_label: "CONTACT US",
+
+contact_title: "Request a quote",
+
+contact_intro:
+    "Tell us what you need to transport and from where to where. We will contact you to evaluate your request.",
+
+route_departure: "DEPARTURE",
+route_departure_title: "Where does the goods start from?",
+
+route_destination: "DESTINATION",
+route_destination_title: "Where should the goods arrive?",
+
+country_label: "Country",
+city_label: "City",
+zip_label: "Postal code",
+
+departure_country_placeholder: "E.g. Italy",
+departure_city_placeholder: "E.g. Borso del Grappa",
+departure_zip_placeholder: "E.g. 31030",
+
+destination_country_placeholder: "E.g. Germany",
+destination_city_placeholder: "E.g. Munich",
+destination_zip_placeholder: "E.g. 80331",
+
+name_label: "Full name / Company",
+name_placeholder: "E.g. Mario Rossi / Company Ltd.",
+
+email_label: "Email",
+email_placeholder: "name@company.com",
+
+phone_label: "Phone",
+phone_placeholder: "+39 ...",
+
+goods_label: "Type of goods",
+goods_placeholder: "E.g. Pallets, furniture, machinery...",
+
+packages_label: "Number of packages",
+packages_placeholder: "E.g. 5",
+
+weight_label: "Approximate weight",
+weight_placeholder: "E.g. 500 kg",
+
+dimensions_label: "Dimensions",
+dimensions_placeholder: "E.g. 120 × 80 × 100 cm",
+
+date_label: "Preferred date",
+
+message_placeholder:
+    "Describe the transport, quantity, and any special requirements...",
+
+submit_quote: "Request a quote",
+
+// footer
+
+final_cta_title: "Do you need transport?",
+final_cta_text:
+    "Tell us what you need to transport and from where to where.",
+final_cta_button: "Request a quote",
+
+footer_description:
+    "Transport and logistics solutions from Borso del Grappa throughout Italy and Europe.",
+
+footer_contacts: "Contacts",
+footer_availability: "🕐 Available 24/7",
+footer_quick_links: "Quick links",
+
+footer_copyright:
+    "© 2026 KSN TRASPORTI. All rights reserved.",
+
 
            
     }

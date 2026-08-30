@@ -310,42 +310,46 @@
 
 
         <!-- CHI SIAMO -->
-        <section class="about" id="about">
+<section class="about" id="about">
 
-            <div class="about-content">
+    <div class="about-content">
 
-                <span class="section-label">CHI SIAMO</span>
+        <span class="section-label" data-i18n="about_label">
+            CHI SIAMO
+        </span>
 
-                <h2>
-                    Trasporto e affidabilità, in movimento.
-                </h2>
+        <h2 data-i18n="about_title">
+            Trasporto e affidabilità, in movimento.
+        </h2>
 
-                <p>
-                    KSN TRASPORTI è un'azienda con sede a Borso del Grappa,
-                    specializzata nel trasporto di merci in Italia e in Europa.
-                </p>
+        <p data-i18n="about_text_1">
+            KSN TRASPORTI è un'azienda con sede a Borso del Grappa,
+            specializzata nel trasporto di merci in Italia e in Europa.
+        </p>
 
-                <p>
-                    Ci occupiamo di trasportare le tue merci dal punto A
-                    al punto B, offrendo un servizio professionale e flessibile.
-                </p>
+        <p data-i18n="about_text_2">
+            Ci occupiamo di trasportare le tue merci dal punto A
+            al punto B, offrendo un servizio professionale e flessibile.
+        </p>
 
-                <a href="#contact" class="btn btn-primary">
-                    Parliamo del tuo trasporto
-                </a>
+        <a href="#contact" class="btn btn-primary" data-i18n="about_button">
+            Parliamo del tuo trasporto
+        </a>
 
-            </div>
+    </div>
 
-            <div class="about-image">
-                <img src="images/camion2.png"
-                    alt="Camion KSN TRASPORTI">
-            </div>
+    <div class="about-image">
 
-        </section>
+        <img src="images/camion2.png"
+            alt="Camion KSN TRASPORTI">
+
+    </div>
+
+</section>
 
 
         <!-- URGENZE H24 -->
-        <section class="emergency">
+<section class="emergency">
 
     <div class="emergency-content">
 
@@ -353,26 +357,30 @@
             🚨
         </div>
 
-        <span class="emergency-label">
+        <span class="emergency-label" data-i18n="emergency_label">
             REPERIBILITÀ H24
         </span>
 
-        <h2>
+        <h2 data-i18n="emergency_title">
             Hai un'urgenza?
         </h2>
 
-        <p>
+        <p data-i18n="emergency_text">
             Hai bisogno di organizzare un trasporto rapidamente?
             Contattaci subito: siamo disponibili H24.
         </p>
 
         <div class="emergency-actions">
 
-            <a href="tel:+390000000000" class="btn btn-light">
+            <a href="tel:+390000000000"
+                class="btn btn-light"
+                data-i18n="emergency_call">
                 📞 Contattaci subito
             </a>
 
-            <a href="#contact" class="btn btn-outline-light">
+            <a href="#contact"
+                class="btn btn-outline-light"
+                data-i18n="emergency_quote">
                 Richiedi un preventivo
             </a>
 
@@ -384,256 +392,335 @@
 
 
         <!-- PREVENTIVO -->
-        <section class="contact" id="contact">
+       <section class="contact" id="contact">
 
-            <div class="section-heading">
+    <div class="section-heading">
 
-                <span class="section-label">CONTATTACI</span>
+        <span class="section-label" data-i18n="contact_label">
+            CONTATTACI
+        </span>
 
-                <h2>Richiedi un preventivo</h2>
+        <h2 data-i18n="contact_title">
+            Richiedi un preventivo
+        </h2>
 
-                <p>
-                    Raccontaci cosa devi trasportare e da dove a dove.
-                    Ti ricontatteremo per valutare la tua richiesta.
-                </p>
+        <p data-i18n="contact_intro">
+            Raccontaci cosa devi trasportare e da dove a dove.
+            Ti ricontatteremo per valutare la tua richiesta.
+        </p>
+
+    </div>
+
+    <form class="quote-form"
+        action="https://formspree.io/f/xvkoodlr"
+        method="POST">
+
+        <div class="route-grid">
+
+            <div class="route-box">
+
+                <div class="route-header">
+                    <span class="route-number">01</span>
+
+                    <div>
+                        <span class="route-label" data-i18n="route_departure">
+                            PARTENZA
+                        </span>
+
+                        <h3 data-i18n="route_departure_title">
+                            Da dove parte la merce?
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="route-fields">
+
+                    <div class="input-group">
+                        <label for="partenza-paese" data-i18n="country_label">
+                            Paese
+                        </label>
+
+                        <input
+                            type="text"
+                            id="partenza-paese"
+                            name="partenza_paese"
+                            placeholder="Es. Italia"
+                            data-i18n-placeholder="departure_country_placeholder"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="partenza-citta" data-i18n="city_label">
+                            Città
+                        </label>
+
+                        <input
+                            type="text"
+                            id="partenza-citta"
+                            name="partenza_citta"
+                            placeholder="Es. Borso del Grappa"
+                            data-i18n-placeholder="departure_city_placeholder"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="partenza-cap" data-i18n="zip_label">
+                            CAP
+                        </label>
+
+                        <input
+                            type="text"
+                            id="partenza-cap"
+                            name="partenza_cap"
+                            placeholder="Es. 31030"
+                            data-i18n-placeholder="departure_zip_placeholder"
+                            required
+                        >
+                    </div>
+
+                </div>
 
             </div>
 
-            <form class="quote-form"
-                action="https://formspree.io/f/xvkoodlr"
-                method="POST">
 
-                <div class="route-grid">
-
-    <div class="route-box">
-
-        <div class="route-header">
-            <span class="route-number">01</span>
-
-            <div>
-                <span class="route-label">PARTENZA</span>
-                <h3>Da dove parte la merce?</h3>
+            <div class="route-arrow">
+                →
             </div>
+
+
+            <div class="route-box">
+
+                <div class="route-header">
+                    <span class="route-number">02</span>
+
+                    <div>
+                        <span class="route-label" data-i18n="route_destination">
+                            DESTINAZIONE
+                        </span>
+
+                        <h3 data-i18n="route_destination_title">
+                            Dove deve arrivare la merce?
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="route-fields">
+
+                    <div class="input-group">
+                        <label for="destinazione-paese" data-i18n="country_label">
+                            Paese
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destinazione-paese"
+                            name="destinazione_paese"
+                            placeholder="Es. Germania"
+                            data-i18n-placeholder="destination_country_placeholder"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="destinazione-citta" data-i18n="city_label">
+                            Città
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destinazione-citta"
+                            name="destinazione_citta"
+                            placeholder="Es. Monaco"
+                            data-i18n-placeholder="destination_city_placeholder"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="destinazione-cap" data-i18n="zip_label">
+                            CAP
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destinazione-cap"
+                            name="destinazione_cap"
+                            placeholder="Es. 80331"
+                            data-i18n-placeholder="destination_zip_placeholder"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="route-fields">
+
+        <div class="form-grid">
 
             <div class="input-group">
-                <label for="partenza-paese">Paese</label>
+                <label for="nome" data-i18n="name_label">
+                    Nome e cognome / Azienda
+                </label>
+
                 <input
                     type="text"
-                    id="partenza-paese"
-                    name="partenza_paese"
-                    placeholder="Es. Italia"
+                    id="nome"
+                    name="nome"
+                    placeholder="Es. Mario Rossi / Azienda S.r.l."
+                    data-i18n-placeholder="name_placeholder"
                     required
                 >
             </div>
 
             <div class="input-group">
-                <label for="partenza-citta">Città</label>
+                <label for="email" data-i18n="email_label">
+                    Email
+                </label>
+
                 <input
-                    type="text"
-                    id="partenza-citta"
-                    name="partenza_citta"
-                    placeholder="Es. Borso del Grappa"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="nome@azienda.it"
+                    data-i18n-placeholder="email_placeholder"
                     required
                 >
             </div>
 
             <div class="input-group">
-                <label for="partenza-cap">CAP</label>
+                <label for="telefono" data-i18n="phone_label">
+                    Telefono
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="+39 ..."
+                    data-i18n-placeholder="phone_placeholder"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="merce" data-i18n="goods_label">
+                    Tipo di merce
+                </label>
+
                 <input
                     type="text"
-                    id="partenza-cap"
-                    name="partenza_cap"
-                    placeholder="Es. 31030"
+                    id="merce"
+                    name="merce"
+                    placeholder="Es. Pallet, mobili, macchinari..."
+                    data-i18n-placeholder="goods_placeholder"
                     required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="colli" data-i18n="packages_label">
+                    Numero di colli
+                </label>
+
+                <input
+                    type="number"
+                    id="colli"
+                    name="colli"
+                    placeholder="Es. 5"
+                    data-i18n-placeholder="packages_placeholder"
+                    min="1"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="peso" data-i18n="weight_label">
+                    Peso indicativo
+                </label>
+
+                <input
+                    type="text"
+                    id="peso"
+                    name="peso"
+                    placeholder="Es. 500 kg"
+                    data-i18n-placeholder="weight_placeholder"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="dimensioni" data-i18n="dimensions_label">
+                    Dimensioni
+                </label>
+
+                <input
+                    type="text"
+                    id="dimensioni"
+                    name="dimensioni"
+                    placeholder="Es. 120 × 80 × 100 cm"
+                    data-i18n-placeholder="dimensions_placeholder"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="data" data-i18n="date_label">
+                    Data desiderata
+                </label>
+
+                <input
+                    type="date"
+                    id="data"
+                    name="data"
                 >
             </div>
 
         </div>
 
-    </div>
+
+        <textarea
+            name="messaggio"
+            rows="6"
+            placeholder="Descrivi il trasporto, quantità, eventuali esigenze particolari..."
+            data-i18n-placeholder="message_placeholder"
+        ></textarea>
 
 
-    <div class="route-arrow">
-        →
-    </div>
+        <button type="submit"
+            class="btn btn-primary form-submit"
+            data-i18n="submit_quote">
+            Richiedi il preventivo
+        </button>
 
+    </form>
 
-    <div class="route-box">
-
-        <div class="route-header">
-            <span class="route-number">02</span>
-
-            <div>
-                <span class="route-label">DESTINAZIONE</span>
-                <h3>Dove deve arrivare la merce?</h3>
-            </div>
-        </div>
-
-        <div class="route-fields">
-
-            <div class="input-group">
-                <label for="destinazione-paese">Paese</label>
-                <input
-                    type="text"
-                    id="destinazione-paese"
-                    name="destinazione_paese"
-                    placeholder="Es. Germania"
-                    required
-                >
-            </div>
-
-            <div class="input-group">
-                <label for="destinazione-citta">Città</label>
-                <input
-                    type="text"
-                    id="destinazione-citta"
-                    name="destinazione_citta"
-                    placeholder="Es. Monaco"
-                    required
-                >
-            </div>
-
-            <div class="input-group">
-                <label for="destinazione-cap">CAP</label>
-                <input
-                    type="text"
-                    id="destinazione-cap"
-                    name="destinazione_cap"
-                    placeholder="Es. 80331"
-                    required
-                >
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-    <div class="form-grid">
-
-    <div class="input-group">
-        <label for="nome">Nome e cognome / Azienda</label>
-        <input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Es. Mario Rossi / Azienda S.r.l."
-            required
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="email">Email</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="nome@azienda.it"
-            required
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="telefono">Telefono</label>
-        <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="+39 ..."
-            required
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="merce">Tipo di merce</label>
-        <input
-            type="text"
-            id="merce"
-            name="merce"
-            placeholder="Es. Pallet, mobili, macchinari..."
-            required
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="colli">Numero di colli</label>
-        <input
-            type="number"
-            id="colli"
-            name="colli"
-            placeholder="Es. 5"
-            min="1"
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="peso">Peso indicativo</label>
-        <input
-            type="text"
-            id="peso"
-            name="peso"
-            placeholder="Es. 500 kg"
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="dimensioni">Dimensioni</label>
-        <input
-            type="text"
-            id="dimensioni"
-            name="dimensioni"
-            placeholder="Es. 120 × 80 × 100 cm"
-        >
-    </div>
-
-    <div class="input-group">
-        <label for="data">Data desiderata</label>
-        <input
-            type="date"
-            id="data"
-            name="data"
-        >
-    </div>
-
-</div>
-
-                <textarea name="messaggio"
-                    rows="6"
-                    placeholder="Descrivi il trasporto, quantità, eventuali esigenze particolari..."></textarea>
-
-                <button type="submit" class="btn btn-primary form-submit">
-                    Richiedi il preventivo
-                </button>
-
-            </form>
-
-        </section>
-
+</section>
 
         <!-- CTA FINALE -->
         <section class="final-cta">
 
-            <h2>Hai bisogno di un trasporto?</h2>
+    <h2 data-i18n="final_cta_title">
+        Hai bisogno di un trasporto?
+    </h2>
 
-            <p>
-                Raccontaci cosa devi trasportare e da dove a dove.
-            </p>
+    <p data-i18n="final_cta_text">
+        Raccontaci cosa devi trasportare e da dove a dove.
+    </p>
 
-            <a href="#contact" class="btn btn-light">
-                Richiedi un preventivo
-            </a>
+    <a href="#contact"
+        class="btn btn-light"
+        data-i18n="final_cta_button">
+        Richiedi un preventivo
+    </a>
 
-        </section>
+</section>
 
-    </main>
+</main>
 
 
-    <!-- FOOTER -->
-    <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
 
     <div class="footer-content">
@@ -644,7 +731,7 @@
                 <img src="images/logo.png" alt="KSN TRASPORTI">
             </a>
 
-            <p>
+            <p data-i18n="footer_description">
                 Trasporti e soluzioni logistiche da Borso del Grappa
                 in tutta Italia e in Europa.
             </p>
@@ -654,7 +741,9 @@
 
         <div class="footer-contact">
 
-            <h3>Contatti</h3>
+            <h3 data-i18n="footer_contacts">
+                Contatti
+            </h3>
 
             <p>
                 📍 Borso del Grappa, Italia
@@ -674,7 +763,7 @@
                 </a>
             </p>
 
-            <p>
+            <p data-i18n="footer_availability">
                 🕐 Reperibilità H24
             </p>
 
@@ -683,12 +772,25 @@
 
         <div class="footer-links">
 
-            <h3>Link rapidi</h3>
+            <h3 data-i18n="footer_quick_links">
+                Link rapidi
+            </h3>
 
-            <a href="#home">Home</a>
-            <a href="#services">Servizi</a>
-            <a href="#about">Chi siamo</a>
-            <a href="#contact">Richiedi un preventivo</a>
+            <a href="#home" data-i18n="nav_home">
+                Home
+            </a>
+
+            <a href="#services" data-i18n="nav_services">
+                Servizi
+            </a>
+
+            <a href="#about" data-i18n="nav_about">
+                Chi siamo
+            </a>
+
+            <a href="#contact" data-i18n="nav_contact">
+                Richiedi un preventivo
+            </a>
 
         </div>
 
@@ -697,14 +799,13 @@
 
     <div class="footer-bottom">
 
-        <p>
+        <p data-i18n="footer_copyright">
             © 2026 KSN TRASPORTI. Tutti i diritti riservati.
         </p>
 
     </div>
 
 </footer>
-
 
 
     <script src="js/script.js"></script>
