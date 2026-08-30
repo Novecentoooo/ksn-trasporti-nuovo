@@ -273,3 +273,21 @@ why_4_text:
     }
 
 };
+
+// Animazione delle card servizi anche su dispositivi touch
+
+const serviceCards = document.querySelectorAll(".service-card");
+
+serviceCards.forEach((card) => {
+
+    card.addEventListener("touchstart", () => {
+        card.classList.add("touch-active");
+    });
+
+    card.addEventListener("touchend", () => {
+        setTimeout(() => {
+            card.classList.remove("touch-active");
+        }, 250);
+    });
+
+});
