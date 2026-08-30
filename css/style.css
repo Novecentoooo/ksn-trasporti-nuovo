@@ -45,6 +45,14 @@ a {
     width: 100%;
     background: #111111;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+    transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: #000000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
 }
 
 .header-container {
@@ -291,6 +299,15 @@ a {
 
 .btn-light:hover {
     background: #eeeeee;
+}
+
+/* ========================================
+   BUTTON TOUCH EFFECT
+======================================== */
+
+.btn.touch-active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -1438,4 +1455,44 @@ section {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* ========================================
+   HERO ANIMATION
+======================================== */
 
+.hero-content {
+    animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-label {
+    animation: heroFadeUp 0.8s ease 0.1s both;
+}
+
+.hero-content h1 {
+    animation: heroFadeUp 0.8s ease 0.25s both;
+}
+
+.hero-content > p {
+    animation: heroFadeUp 0.8s ease 0.4s both;
+}
+
+.hero-location {
+    animation: heroFadeUp 0.8s ease 0.55s both;
+}
+
+.hero-buttons {
+    animation: heroFadeUp 0.8s ease 0.7s both;
+}
+
+@keyframes heroFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

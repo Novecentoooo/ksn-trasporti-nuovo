@@ -1,6 +1,24 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
+// Effetto header durante lo scroll
+
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+
+    window.addEventListener("scroll", () => {
+
+        siteHeader.classList.toggle(
+            "scrolled",
+            window.scrollY > 30
+        );
+
+    });
+
+}
+
+
 if (menuToggle && mainNav) {
 
     menuToggle.addEventListener("click", () => {
@@ -136,7 +154,7 @@ const translations = {
         nav_services: "Servizi",
         nav_about: "Chi siamo",
         nav_contact: "Richiedi un preventivo",
-
+        hero_label: "TRASPORTI E LOGISTICA",
         hero_title: "Trasportiamo ciò che conta.",
 
         hero_text:
@@ -147,6 +165,10 @@ const translations = {
         hero_quote: "Richiedi un preventivo",
 
         services_title: "I nostri servizi",
+        services_label: "COSA FACCIAMO",
+
+services_intro:
+    "Soluzioni di trasporto pensate per accompagnare le tue merci dalla partenza alla destinazione.",
 
         service_1_title: "Trasporto merci",
         service_1_text:
@@ -316,7 +338,7 @@ footer_copyright:
         nav_services: "Services",
         nav_about: "About us",
         nav_contact: "Request a quote",
-
+        hero_label: "TRANSPORT & LOGISTICS", 
         hero_title: "We transport what matters.",
 
         hero_text:
@@ -327,7 +349,10 @@ footer_copyright:
         hero_quote: "Request a quote",
 
         services_title: "Our services",
+services_label: "WHAT WE DO",
 
+services_intro:
+    "Transport solutions designed to move your goods from departure to destination.",
         service_1_title: "Freight transport",
         service_1_text:
             "Freight transport from point A to point B, managed with professional organization.",
@@ -524,6 +549,26 @@ whyItems.forEach((item) => {
         setTimeout(() => {
             item.classList.remove("touch-active");
         }, 250);
+    });
+
+});
+
+// Feedback touch sui bottoni
+
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach((button) => {
+
+    button.addEventListener("touchstart", () => {
+        button.classList.add("touch-active");
+    });
+
+    button.addEventListener("touchend", () => {
+
+        setTimeout(() => {
+            button.classList.remove("touch-active");
+        }, 150);
+
     });
 
 });
