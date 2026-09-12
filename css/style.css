@@ -37,21 +37,20 @@ a {
 /* ========================================
    HEADER
 ======================================== */
-
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-    background: #111111;
+    background: #000002;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
     transition:
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 
 .site-header.scrolled {
-    background: #000000;
+    background: #000002;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
 }
 
@@ -459,13 +458,12 @@ section {
 /* ========================================
    RED BANNER
 ======================================== */
-
 .red-banner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
+
     width: 100%;
-    
+
     background: #c8102e;
 
     color: #ffffff;
@@ -509,7 +507,6 @@ section {
     font-size: 13px;
     line-height: 1.45;
 }
-
 
 
 
@@ -971,6 +968,36 @@ section {
     resize: vertical;
 }
 
+.privacy-checkbox {
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.privacy-checkbox label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.privacy-checkbox input {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: #c8102e;
+}
+
+.privacy-checkbox a {
+    color: #c8102e;
+    text-decoration: underline;
+}
+
+.privacy-checkbox a:hover {
+    color: #111;
+}
+
 .form-submit {
     border: none;
 
@@ -1088,6 +1115,26 @@ section {
     font-size: 13px;
 
     color: #777777;
+}
+
+/* =========================
+   DATI AZIENDALI FOOTER
+========================= */
+
+.footer-company-data {
+    margin-top: 20px;
+}
+
+.footer-company-data p {
+    margin: 6px 0;
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.footer-company-data strong {
+    color: #fff;
+    font-weight: 600;
 }
 
 
@@ -1493,6 +1540,101 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+
+}
+
+/* =========================
+   PRIVACY PAGE
+========================= */
+
+.privacy-page {
+    padding: 140px 20px 80px;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-container h1 {
+    font-size: 3rem;
+    margin: 10px 0 25px;
+    color: #111;
+}
+
+.privacy-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 45px;
+}
+
+.privacy-section {
+    margin-bottom: 40px;
+}
+
+.privacy-section h2 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.privacy-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.privacy-section ul {
+    padding-left: 25px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.privacy-section a {
+    color: #c8102e;
+    text-decoration: underline;
+}
+
+.privacy-section a:hover {
+    color: #111;
+}
+
+.privacy-back {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .privacy-page {
+        padding: 110px 15px 50px;
+    }
+
+    .privacy-container {
+        padding: 35px 22px;
+    }
+
+    .privacy-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .privacy-intro {
+        font-size: 1rem;
+    }
+
+    .privacy-section h2 {
+        font-size: 1.2rem;
     }
 
 }
